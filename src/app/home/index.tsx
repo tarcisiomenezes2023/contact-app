@@ -4,8 +4,6 @@ import { styles } from "./styles";
 
 export function Home() {
     return (
-        <View style={styles.container}>
-            <Text>Test</Text>
-        </View>
+        <View style={styles.container}></View>
     )
 }
