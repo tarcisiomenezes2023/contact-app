@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "center",
+        backgroundColor: theme.colors.gray_200
     },
     header: {
         width: "100%",
@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
         backgroundColor: theme.colors.blue,
         justifyContent: "flex-end",
         paddingHorizontal: 24,
+        marginBottom: 100,
     },
     input: {
         marginBottom: -27,
