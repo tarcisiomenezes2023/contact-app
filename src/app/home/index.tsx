@@ -1,13 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 import { Input } from "@/components/input"
 import { Feather } from "@expo/vector-icons"
 import { theme } from "@/theme";
 import { Contact } from "@/components/contact";
+import * as Contacts from "expo-contacts"
 
 export function Home() {
     const [name, setName] = useState("")
+
+    async function fetchContacts() {
+        try {
+            const { status } = await Contacts.requestPermissionsAsync()
+
+            if (status === Contacts.PermissionStatus.GRANTED) {
+                const { data } = await Contacts.getContactsAsync()
+                console.log(data)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        fetchContacts()
+    }, [])
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
