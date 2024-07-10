@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
         backgroundColor: theme.colors.blue,
         justifyContent: "flex-end",
         paddingHorizontal: 24,
+        zIndex: 1,
     },
     input: {
         marginBottom: -27,
@@ -32,5 +33,11 @@ export const styles = StyleSheet.create({
         padding: 24,
         gap: 12,
         paddingTop: 64,
-    }
+    },
+    Separator: {
+        width: 100%,
+        height: 1,
+        backgroundColor: theme.colors.gray_300,
+        marginTop: 12,
+    },
 })
