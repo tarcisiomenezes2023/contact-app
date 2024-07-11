@@ -6,8 +6,10 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: theme.colors.white,
-    },
-    text: {
-        fontFamily: theme.fontFamily.medium,
+    }, 
+    Image: {
+        width: 50,
+        height: 50,
+        borderRadius: 15,
     },
 })
